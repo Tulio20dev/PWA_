@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 2rem;
+}
+.box {
+  background: gainsboro;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  color: white;
+}
+.pai{
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-top: 2rem;
+    padding: 2rem;
+    max-width: 50vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    container-type: inline-size;
+    container-name: pai
+}
+.filho1,.filho2,.filho3{
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin:0.1rem;
+}
+@media all{
+  .box{
+    border: 2px solid black;
+  }
+}
+@media print{
+  body{
+    background-color: darkgray;
+    color: coral;
+  }
+  .box{
+    display: none;
+  }
+}
+@media(max-width:600px) {
+  .box{
+    background-color: lightblue;
+  }
+}
+@media(min-width:800px){
+  body{
+    background-color:cyan;
+  }
+}
+@media(orientation: portrait) {
+  .box{
+    color: red;
+  }
+}
+@media(prefers-color-scheme: dark){
+  body{
+    background: gray;
+    color:white;
+  }
+}
+@media not(orientation: 1){
+  .box{
+    font-size: 100px;
+  }
+}
+@media screen and (min-width:1200px),(prefers-color-scheme: dark){
+  body {
+    font-size: 20px;
+  }  
+}
+@container pai (max-width: 400px){
+  .filho1{
+    background: lightblue;
+  }
+  .filho2{
+    background: lightgreen;
+  }
+  .filho3{
+    background: lightcoral;
+  }
+}
+
